@@ -23,21 +23,38 @@ public class Dog {
         this.friends = friends;
     }
 
-    public String getDogName() {
+//    public String getDogName() {
+//        return name;
+//    }
+//
+//    @Expressions("name")
+//    public void setDogName(String name) {
+//        this.name = name;
+//    }
+//
+//    public Integer getDogAge() {
+//        return age;
+//    }
+//
+//    @Expressions("age")
+//    public void setDogAge(Integer age) {
+//        this.age = age;
+//    }
+
+
+    public String getName() {
         return name;
     }
 
-    @Expressions("name")
-    public void setDogName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Integer getDogAge() {
+    public Integer getAge() {
         return age;
     }
 
-    @Expressions("age")
-    public void setDogAge(Integer age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

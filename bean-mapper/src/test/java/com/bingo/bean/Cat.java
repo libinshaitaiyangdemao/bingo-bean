@@ -23,21 +23,37 @@ public class Cat {
         this.friends = friends;
     }
 
-    @Expressions("name")
-    public String getCatName() {
+//    @Expressions("name")
+//    public String getCatName() {
+//        return name;
+//    }
+//
+//    public void setCatName(String name) {
+//        this.name = name;
+//    }
+//
+//    @Expressions("age")
+//    public int getCatAge() {
+//        return age;
+//    }
+//
+//    public void setCatAge(int age) {
+//        this.age = age;
+//    }
+
+    public String getName() {
         return name;
     }
 
-    public void setCatName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    @Expressions("age")
-    public int getCatAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setCatAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 }

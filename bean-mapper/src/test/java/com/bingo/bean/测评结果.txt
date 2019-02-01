@@ -1,0 +1,62 @@
+本次测评，涉及到工具为
+    com.bingo.bean.ExpressionCoper：本项目
+    com.bingo.bean.GetSetCoper：手写getset
+    com.bingo.bean.FastJsonCoper:fast json,先转json，再转实体
+    com.bingo.bean.DozerCoper：Dozer
+    都采用了缓存转换工具，并先初始化的方式。
+    本次测评没有加入CGLIB的BeanCoper,因在其方便、且效率优先的规则下，不支持不同类型的Copy,使用受限，
+    故没考虑该工具。但在其支持的范围内，绝对快于本项目。
+    因考虑到各种工具的不同属性名称间的映射问题，全都采用相同名称的实体进行的测评。
+class com.bingo.bean.ExpressionCoper
+执行10次，共耗时：1毫秒，平均每次耗时：0.1毫秒
+class com.bingo.bean.GetSetCoper
+执行10次，共耗时：0毫秒，平均每次耗时：0.0毫秒
+class com.bingo.bean.FastJsonCoper
+执行10次，共耗时：5毫秒，平均每次耗时：0.5毫秒
+class com.bingo.bean.DozerCoper
+执行10次，共耗时：10毫秒，平均每次耗时：1.0毫秒
+
+class com.bingo.bean.ExpressionCoper
+执行100次，共耗时：2毫秒，平均每次耗时：0.02毫秒
+class com.bingo.bean.GetSetCoper
+执行100次，共耗时：1毫秒，平均每次耗时：0.01毫秒
+class com.bingo.bean.FastJsonCoper
+执行100次，共耗时：44毫秒，平均每次耗时：0.44毫秒
+class com.bingo.bean.DozerCoper
+执行100次，共耗时：100毫秒，平均每次耗时：1.0毫秒
+
+class com.bingo.bean.ExpressionCoper
+执行1000次，共耗时：20毫秒，平均每次耗时：0.02毫秒
+class com.bingo.bean.GetSetCoper
+执行1000次，共耗时：3毫秒，平均每次耗时：0.003毫秒
+class com.bingo.bean.FastJsonCoper
+执行1000次，共耗时：216毫秒，平均每次耗时：0.216毫秒
+class com.bingo.bean.DozerCoper
+执行1000次，共耗时：424毫秒，平均每次耗时：0.424毫秒
+
+class com.bingo.bean.ExpressionCoper
+执行10000次，共耗时：57毫秒，平均每次耗时：0.0057毫秒
+class com.bingo.bean.GetSetCoper
+执行10000次，共耗时：30毫秒，平均每次耗时：0.003毫秒
+class com.bingo.bean.FastJsonCoper
+执行10000次，共耗时：310毫秒，平均每次耗时：0.031毫秒
+class com.bingo.bean.DozerCoper
+执行10000次，共耗时：1112毫秒，平均每次耗时：0.1112毫秒
+
+class com.bingo.bean.ExpressionCoper
+执行100000次，共耗时：246毫秒，平均每次耗时：0.00246毫秒
+class com.bingo.bean.GetSetCoper
+执行100000次，共耗时：103毫秒，平均每次耗时：0.00103毫秒
+class com.bingo.bean.FastJsonCoper
+执行100000次，共耗时：1117毫秒，平均每次耗时：0.01117毫秒
+class com.bingo.bean.DozerCoper
+执行100000次，共耗时：3926毫秒，平均每次耗时：0.03926毫秒
+
+class com.bingo.bean.ExpressionCoper
+执行1000000次，共耗时：1230毫秒，平均每次耗时：0.00123毫秒
+class com.bingo.bean.GetSetCoper
+执行1000000次，共耗时：334毫秒，平均每次耗时：3.34E-4毫秒
+class com.bingo.bean.FastJsonCoper
+执行1000000次，共耗时：9941毫秒，平均每次耗时：0.009941毫秒
+class com.bingo.bean.DozerCoper
+执行1000000次，共耗时：12993毫秒，平均每次耗时：0.012993毫秒

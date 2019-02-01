@@ -1,6 +1,4 @@
-package com.bingo.bean;
-
-import java.util.Date;
+package com.bingo.bean.domain;
 
 /**
  * @description:
@@ -16,6 +14,15 @@ public class ToBean {
     private long money;
     private int height;
     private Dog pet;
+    private ParameterizedBean<Dog> pb;
+
+    public ParameterizedBean<Dog> getPb() {
+        return pb;
+    }
+
+    public void setPb(ParameterizedBean<Dog> pb) {
+        this.pb = pb;
+    }
 
     public long getAge() {
         return age;
@@ -83,6 +90,7 @@ public class ToBean {
                 ", money=" + money +
                 ", height=" + height +
                 ", pet=" + pet +
+                ", pb=" + pb +
                 '}';
     }
 }

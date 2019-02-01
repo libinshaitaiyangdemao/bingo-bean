@@ -33,7 +33,7 @@ public class BaseExpressionBuilder extends Builder<MapUnit> {
         } else {
             if (source.equals(String.class)) {
                 if (BeanUtil.hasMethod(target,"valueOf",String.class)) {
-                    Class clazs = BeanUtil.createClass(createExpressionClassName(mu),AbstractExpression.class,String.format(MethodTemplate.EXPRESSION_VALUEOF_STRING,target.toString()));
+                    Class clazs = BeanUtil.createClass(createExpressionClassName(mu),AbstractExpression.class,String.format(MethodTemplate.EXPRESSION_VALUEOF_STRING,BeanUtil.getClassCastName(target)));
                     return (Expression) BeanUtil.newInstance(clazs);
                 }
             } else if (Number.class.isAssignableFrom(source) && Number.class.isAssignableFrom(target)) {
@@ -43,7 +43,7 @@ public class BaseExpressionBuilder extends Builder<MapUnit> {
                 }else{
                     type = target.getSimpleName().toLowerCase();
                 }
-                Class clazs = BeanUtil.createClass(createExpressionClassName(mu),AbstractExpression.class,String.format(MethodTemplate.EXPRESSION_NUMBER_VALUE,target.getName(),type));
+                Class clazs = BeanUtil.createClass(createExpressionClassName(mu),AbstractExpression.class,String.format(MethodTemplate.EXPRESSION_NUMBER_VALUE,BeanUtil.getClassCastName(target),type));
                 return (Expression) BeanUtil.newInstance(clazs);
             }
         }

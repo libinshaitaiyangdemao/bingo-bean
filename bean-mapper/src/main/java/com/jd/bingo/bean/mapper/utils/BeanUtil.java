@@ -491,7 +491,7 @@ public class BeanUtil {
             // Field不在当前类定义,继续向上转型
         }
         Class superClass = clazs.getSuperclass();
-        if(superClass != Object.class){
+        if(superClass != null && superClass != Object.class){
             map.putAll(getExtentsMethods(superClass,predicate));
         }
         Class[] interfaces = clazs.getInterfaces();

@@ -58,6 +58,8 @@ public class BeanMapUnitParseNoder implements ChainMapParseNoder {
         List<DefiniteType> dts = cms.get(clazs);
         Map<String,MapUnit> mus = new HashMap<>();
         Map<Class, List<DefiniteType>> confirms = BeanUtil.confirmSupperParameterizedActualTypeArguments(clazs,dts);
+        //最外层的类没有确认泛型，需要手动加入
+        confirms.put(clazs,dts);
         Map<Class, List<Field>> fieldMap = BeanUtil.getExtentsFields(clazs, f->true);
         if(!fieldMap.isEmpty()){
             fieldMap.forEach((k,v)->{
@@ -125,6 +127,8 @@ public class BeanMapUnitParseNoder implements ChainMapParseNoder {
         List<DefiniteType> dts = cms.get(clazs);
         List<MapUnit> result = new ArrayList<>();
         Map<Class, List<DefiniteType>> confirms = BeanUtil.confirmSupperParameterizedActualTypeArguments(clazs,dts);
+        //最外层的类没有确认泛型，需要手动加入
+        confirms.put(clazs,dts);
         Map<Class, List<Field>> fieldMap = BeanUtil.getExtentsFields(clazs, f->true);
         if(!fieldMap.isEmpty()){
             fieldMap.forEach((k,v)->{

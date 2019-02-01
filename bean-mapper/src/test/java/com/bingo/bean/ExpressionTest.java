@@ -1,13 +1,16 @@
 package com.bingo.bean;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.bingo.bean.domain.Cat;
+import com.bingo.bean.domain.Dog;
+import com.bingo.bean.domain.FromBean;
+import com.bingo.bean.domain.ParameterizedBean;
+import com.bingo.bean.domain.ToBean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jd.bingo.bean.mapper.ExpressionFactory;
 import com.jd.bingo.bean.mapper.express.Expression;
 import org.dozer.DozerBeanMapper;
 import org.junit.Test;
 
-import java.io.DataOutput;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -40,14 +43,15 @@ public class ExpressionTest {
         fb.setHeight(188.97f);
         fb.setMoney(99999999999.999d);
         fb.setName("王二小");
-
+        fb.setPb(new ParameterizedBean<>());
+        fb.getPb().setData(cat);
 
         List<Coper> copers = new ArrayList<>();
         copers.add(new ExpressionCoper(fb));
         copers.add(new GetSetCoper(fb));
         copers.add(new FastJsonCoper(fb));
         copers.add(new DozerCoper(fb));
-        copers.forEach(coper->coper.doCopy(1000000));
+        copers.forEach(coper->coper.doCopy(1));
     }
 }
 

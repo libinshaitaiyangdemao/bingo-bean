@@ -36,6 +36,7 @@ public class BeanExpressionBuilder extends Builder<BeanMapUnit>{
                         expression.addGetSetter(gs);
                     } catch (Exception e) {
                         //属性可能不可映射，跳过
+                        e.printStackTrace();
                     }
                 }
             }
@@ -43,7 +44,7 @@ public class BeanExpressionBuilder extends Builder<BeanMapUnit>{
         return expression;
     }
     protected String[] createMethods(BeanMapUnit mu){
-        String method = String.format(MethodTemplate.EXPRESSION_CREATE_TARGET,((Class)mu.getTarget()).getName());
+        String method = String.format(MethodTemplate.EXPRESSION_CREATE_TARGET,BeanUtil.getClassCastName(mu.getTarget()));
         return new String[]{method};
     }
 

@@ -6,14 +6,15 @@ package com.bingo.bean.domain;
  * @createdate: 2019/2/1 16:38
  * @lastdate:
  */
-public class ParameterizedFromBean {
-    private ParameterizedBean<String> p;
+public class ParameterizedToBean {
 
-    public ParameterizedBean<String> getP() {
+    private ParameterizedBean<Dog> p;
+
+    public ParameterizedBean<Dog> getP() {
         return p;
     }
 
-    public void setP(ParameterizedBean<String> p) {
+    public void setP(ParameterizedBean<Dog> p) {
         this.p = p;
     }
 

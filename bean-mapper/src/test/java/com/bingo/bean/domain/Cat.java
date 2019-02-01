@@ -1,4 +1,4 @@
-package com.bingo.bean;
+package com.bingo.bean.domain;
 
 import com.jd.bingo.bean.mapper.annotation.Expressions;
 

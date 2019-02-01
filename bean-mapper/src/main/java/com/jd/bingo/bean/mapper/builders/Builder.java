@@ -26,7 +26,7 @@ public abstract class Builder<T extends MapUnit> {
     protected abstract Expression build(T mu);
 
     protected String createExpressionClassName(MapUnit mu){
-        StringBuilder sb = new StringBuilder(getClass().toString());
+        StringBuilder sb = new StringBuilder(getClass().getName());
         sb.append("$$").append(mu.getSouce().toString()).append("_").append(mu.getTarget().toString()).append("_Expression");
         return sb.toString();
     }

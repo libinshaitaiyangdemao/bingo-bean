@@ -7,4 +7,20 @@ package com.bingo.bean.domain;
  * @lastdate:
  */
 public class ParameterizedFromBean {
+    private ParameterizedBean<Cat> p;
+
+    public ParameterizedBean<Cat> getP() {
+        return p;
+    }
+
+    public void setP(ParameterizedBean<Cat> p) {
+        this.p = p;
+    }
+
+    @Override
+    public String toString() {
+        return "ParameterizedFromBean{" +
+                "p=" + p +
+                '}';
+    }
 }

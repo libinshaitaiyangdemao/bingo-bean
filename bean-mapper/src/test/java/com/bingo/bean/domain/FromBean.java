@@ -1,4 +1,4 @@
-package com.bingo.bean;
+package com.bingo.bean.domain;
 
 import com.jd.bingo.bean.mapper.annotation.Expressions;
 
@@ -19,6 +19,15 @@ public class FromBean {
     private double money;
     private float height;
     private Cat pet;
+    private ParameterizedBean<Cat> pb;
+
+    public ParameterizedBean<Cat> getPb() {
+        return pb;
+    }
+
+    public void setPb(ParameterizedBean<Cat> pb) {
+        this.pb = pb;
+    }
 
     public int getAge() {
         return age;

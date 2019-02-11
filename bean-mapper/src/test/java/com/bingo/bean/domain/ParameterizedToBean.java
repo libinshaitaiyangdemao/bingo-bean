@@ -8,13 +8,13 @@ package com.bingo.bean.domain;
  */
 public class ParameterizedToBean {
 
-    private ParameterizedBean<Dog> p;
+    private ParameterizedBean<Dog,Integer> p;
 
-    public ParameterizedBean<Dog> getP() {
+    public ParameterizedBean<Dog,Integer> getP() {
         return p;
     }
 
-    public void setP(ParameterizedBean<Dog> p) {
+    public void setP(ParameterizedBean<Dog,Integer> p) {
         this.p = p;
     }
 

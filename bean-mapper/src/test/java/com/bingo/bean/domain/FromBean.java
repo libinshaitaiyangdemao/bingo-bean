@@ -19,13 +19,13 @@ public class FromBean {
     private double money;
     private float height;
     private Cat pet;
-    private ParameterizedBean<Cat> pb;
+    private ParameterizedBean<Cat,String> pb;
 
-    public ParameterizedBean<Cat> getPb() {
+    public ParameterizedBean<Cat,String> getPb() {
         return pb;
     }
 
-    public void setPb(ParameterizedBean<Cat> pb) {
+    public void setPb(ParameterizedBean<Cat,String> pb) {
         this.pb = pb;
     }
 

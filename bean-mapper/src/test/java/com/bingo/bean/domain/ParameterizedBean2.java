@@ -5,26 +5,12 @@ import java.util.List;
 /**
  * @description:
  * @author: libin29
- * @createdate: 2019/2/1 16:06
+ * @createdate: 2019/2/11 11:18
  * @lastdate:
  */
-public class ParameterizedBean<T,E> {
-
+public class ParameterizedBean2<T,E> {
     private T data;
     private List<E> list;
-    private ParameterizedBean2<T,E> pb;
-
-    public ParameterizedBean2<T, E> getPb() {
-        return pb;
-    }
-
-    public void setPb(ParameterizedBean2<T, E> pb) {
-        this.pb = pb;
-    }
-
-    public T getData() {
-        return data;
-    }
 
     public List<E> getList() {
         return list;
@@ -34,16 +20,19 @@ public class ParameterizedBean<T,E> {
         this.list = list;
     }
 
+    public T getData() {
+        return data;
+    }
+
     public void setData(T data) {
         this.data = data;
     }
 
     @Override
     public String toString() {
-        return "ParameterizedBean{" +
+        return "ParameterizedBean2{" +
                 "data=" + data +
                 ", list=" + list +
-                ", pb=" + pb +
                 '}';
     }
 }

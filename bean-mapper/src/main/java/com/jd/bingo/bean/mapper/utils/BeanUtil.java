@@ -1,5 +1,7 @@
 package com.jd.bingo.bean.mapper.utils;
 
+import com.jd.bingo.bean.mapper.builders.map.impl.reflect.ParameterizedTypeImpl;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Method;
@@ -311,14 +313,32 @@ public class BeanUtil {
         return map;
     }
 
+    /**
+     * 确认泛型类型
+     *
+     * @param dt
+     * @param dts
+     * @return
+     */
     public static Type confirmDefiniteType(Type dt, List<DefiniteType> dts) {
         if (dts == null || dts.isEmpty()) {
             return dt;
         }
-        for (DefiniteType pDt : dts) {
-            if (dt instanceof TypeVariable && ((TypeVariable) dt).getName().equals(pDt.getTypeVariable().getName())) {
-                return pDt.getDefinited();
+        if(dt instanceof TypeVariable){
+            for (DefiniteType pDt : dts) {
+                if (((TypeVariable) dt).getName().equals(pDt.getTypeVariable().getName())) {
+                    return pDt.getDefinited();
+                }
             }
+        }else if(dt instanceof ParameterizedType){
+            Type[] actualTypeArguments = ((ParameterizedType) dt).getActualTypeArguments();
+            if(actualTypeArguments.length > 0){
+                for (int i = 0; i < actualTypeArguments.length; i++) {
+                    actualTypeArguments[i] = confirmDefiniteType(actualTypeArguments[i],dts);
+                }
+            }
+            ParameterizedTypeImpl impl = new ParameterizedTypeImpl(((ParameterizedType) dt).getRawType(),actualTypeArguments,((ParameterizedType) dt).getOwnerType());
+            return impl;
         }
         return dt;
     }

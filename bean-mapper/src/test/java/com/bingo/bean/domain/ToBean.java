@@ -14,13 +14,13 @@ public class ToBean {
     private long money;
     private int height;
     private Dog pet;
-    private ParameterizedBean<Dog> pb;
+    private ParameterizedBean<Dog,String> pb;
 
-    public ParameterizedBean<Dog> getPb() {
+    public ParameterizedBean<Dog,String> getPb() {
         return pb;
     }
 
-    public void setPb(ParameterizedBean<Dog> pb) {
+    public void setPb(ParameterizedBean<Dog,String> pb) {
         this.pb = pb;
     }
 

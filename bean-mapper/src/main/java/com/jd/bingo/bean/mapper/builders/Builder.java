@@ -32,6 +32,9 @@ public abstract class Builder<T extends MapUnit> {
     }
 
     protected Expression getExpression(Type source,Type target){
+        if(source.equals(target)){
+            return DoNothingExpression.INSTANCE;
+        }
         //多线程情况下，嵌套引用可能产生死锁
 //        return getExpressionBuilder().getExpressionFactory().getExpression(source,target);
         //避免多线程情况下，嵌套引用产生死锁的可能性

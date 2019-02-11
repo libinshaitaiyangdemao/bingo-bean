@@ -5,7 +5,6 @@ import com.jd.bingo.bean.mapper.builders.map.CollectionMapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 import com.jd.bingo.bean.mapper.express.impl.ArrayCollectionExpression;
 import com.jd.bingo.bean.mapper.express.impl.ArrayExpression;
-import com.jd.bingo.bean.mapper.express.impl.CollectionArrayExpression;
 import com.jd.bingo.bean.mapper.express.impl.CollectionsExpression;
 import com.jd.bingo.bean.mapper.express.impl.DoNothingExpression;
 import com.jd.bingo.bean.mapper.utils.BeanUtil;

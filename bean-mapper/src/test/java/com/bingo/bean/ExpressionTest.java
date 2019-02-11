@@ -47,11 +47,11 @@ public class ExpressionTest {
         fb.getPb().setData(cat);
 
         List<Coper> copers = new ArrayList<>();
+//        copers.add(new GetSetCoper(fb));
+//        copers.add(new FastJsonCoper(fb));
+//        copers.add(new DozerCoper(fb));
         copers.add(new ExpressionCoper(fb));
-        copers.add(new GetSetCoper(fb));
-        copers.add(new FastJsonCoper(fb));
-        copers.add(new DozerCoper(fb));
-        copers.forEach(coper->coper.doCopy(1));
+        copers.forEach(coper->coper.doCopy(10000000));
     }
 }
 

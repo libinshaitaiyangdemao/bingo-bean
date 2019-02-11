@@ -12,7 +12,8 @@ import com.jd.bingo.bean.mapper.utils.BeanUtil;
 import java.nio.channels.ClosedSelectorException;
 
 /**
- * @description:
+ * @description:对每个属性，使用GETSETER进行拷贝
+ *
  * @author: libin29
  * @createdate: 2019/1/23 18:18
  * @lastdate:

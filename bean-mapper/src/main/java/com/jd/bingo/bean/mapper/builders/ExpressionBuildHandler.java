@@ -3,6 +3,7 @@ package com.jd.bingo.bean.mapper.builders;
 import com.jd.bingo.bean.mapper.ExpressionFactory;
 import com.jd.bingo.bean.mapper.builders.impl.BaseExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.BeanExpressionBuilder;
+import com.jd.bingo.bean.mapper.builders.impl.BeanFastExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.CollectionExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.map.BeanMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.CollectionMapUnit;
@@ -42,7 +43,8 @@ public class ExpressionBuildHandler {
     protected void init(){
         setBuilder(MapUnit.class,new BaseExpressionBuilder());
         setBuilder(CollectionMapUnit.class,new CollectionExpressionBuilder());
-        setBuilder(BeanMapUnit.class,new BeanExpressionBuilder());
+//        setBuilder(BeanMapUnit.class,new BeanExpressionBuilder());
+        setBuilder(BeanMapUnit.class,new BeanFastExpressionBuilder());
     }
     public void setBuilder(Class<? extends MapUnit> clazs,Builder<? extends MapUnit> builder){
         builders.put(clazs,builder);

@@ -44,6 +44,23 @@ public interface MethodTemplate {
         }return builder.toString();
     }
 
+    static String arrayCollectionExpressionCopyMethod(Type source){
+        String classCastName = BeanUtil.getClassCastName(source);
+        String lastComponent = classCastName.substring(0, classCastName.indexOf("["));
+        String wd = classCastName.substring(lastComponent.length());
+        if (wd.startsWith("[]")) {
+            wd = wd.substring(2);
+        }
+        StringBuilder builder = new StringBuilder("protected Object copy(Object source, Object target) {");
+        builder.append(classCastName);
+        builder.append(" aSource = (").append(classCastName).append(") source;");
+        builder.append("int length = aSource.length;");
+        builder.append("for(int i = 0;i<length;i++){");
+        builder.append("((java.util.Collection)target).add(expression.express(aSource[i]));");
+        builder.append("}");
+        builder.append(" return target;}");
+        return builder.toString();
+    }
     static String collectionArrayExpressionCopyMethod(Type type) {
         String classCastName = BeanUtil.getClassCastName(type);
         String lastComponent = classCastName.substring(0, classCastName.indexOf("["));

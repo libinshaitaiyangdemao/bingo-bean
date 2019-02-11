@@ -38,9 +38,10 @@ public class CollectionExpressionBuilder extends Builder<CollectionMapUnit> {
         Expression elementExpression = getExpression(mu.getElement().getSouce(), mu.getElement().getTarget());
 
         Class sc = null;
-        String methods[] = new String[1];
+        String methods[] = null;
         if ((mu.getTarget() instanceof Class && ((Class<?>) mu.getTarget()).isArray())||mu.getTarget() instanceof GenericArrayType) {
 //            methods[0] = MethodTemplate.EXPRESSION_CREATE_NULL_TARGET;
+            methods = new String[1];
             sc = ArrayExpression.class;
             if ((mu.getSouce() instanceof Class && ((Class<?>) mu.getSouce()).isArray())|| mu.getSouce() instanceof GenericArrayType) {
                 methods[0] = MethodTemplate.arrayArrayExpressionCopyMethod(mu.getSouce(),mu.getTarget());
@@ -49,12 +50,15 @@ public class CollectionExpressionBuilder extends Builder<CollectionMapUnit> {
             }
 
         } else {
-             methods[0] = String.format(MethodTemplate.EXPRESSION_CREATE_TARGET, getCollectionInstanceClass((Class<? extends Collection>) ((ParameterizedType)mu.getTarget()).getRawType()).getName());
             if ((mu.getSouce() instanceof Class && ((Class<?>) mu.getSouce()).isArray())|| mu.getSouce() instanceof GenericArrayType) {
+                methods = new String[2];
+                methods[1] = MethodTemplate.arrayCollectionExpressionCopyMethod(mu.getSouce());
                 sc = ArrayCollectionExpression.class;
             } else {
+                methods = new String[1];
                 sc = CollectionsExpression.class;
             }
+            methods[0] = String.format(MethodTemplate.EXPRESSION_CREATE_TARGET, getCollectionInstanceClass((Class<? extends Collection>) ((ParameterizedType)mu.getTarget()).getRawType()).getName());
         }
         Class clazs = BeanUtil.createClass(createExpressionClassName(mu) + "_" + BeanUtil.getClassCastName(mu.getElement().getSouce()) + "_" + BeanUtil.getClassCastName(mu.getElement().getTarget()), sc, methods);
         CollectionsExpression result = (CollectionsExpression) BeanUtil.newInstance(clazs);

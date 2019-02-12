@@ -14,6 +14,7 @@ import java.util.Map;
  * @createdate: 2019/1/24 17:40
  * @lastdate:
  */
+@Deprecated
 public class ParameterizedTypeParser extends TypeParser<ParameterizedType> {
 
     @Override

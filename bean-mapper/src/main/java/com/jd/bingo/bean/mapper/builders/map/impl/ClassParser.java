@@ -22,6 +22,7 @@ import static com.jd.bingo.bean.mapper.builders.map.impl.ParseUtil.mapProperties
  * @createdate: 2019/1/24 17:40
  * @lastdate:
  */
+@Deprecated
 public class ClassParser extends TypeParser<Class> {
 
     @Override

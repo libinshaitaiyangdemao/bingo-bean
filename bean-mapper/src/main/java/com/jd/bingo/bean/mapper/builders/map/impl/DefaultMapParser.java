@@ -18,6 +18,7 @@ import java.lang.reflect.WildcardType;
  * @createdate: 2019/1/23 13:55
  * @lastdate:
  */
+@Deprecated
 public class DefaultMapParser implements MapParser {
 
     private TypeParser<Class> classParser;

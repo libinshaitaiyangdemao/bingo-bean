@@ -11,6 +11,7 @@ import java.lang.reflect.Type;
  * @createdate: 2019/1/24 17:40
  * @lastdate:
  */
+@Deprecated
 public abstract class TypeParser<T extends Type> {
 
     private MapParser mapParser;

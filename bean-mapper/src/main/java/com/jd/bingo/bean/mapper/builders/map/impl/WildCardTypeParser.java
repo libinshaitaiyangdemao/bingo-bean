@@ -11,6 +11,7 @@ import java.lang.reflect.WildcardType;
  * @createdate: 2019/1/24 17:40
  * @lastdate:
  */
+@Deprecated
 public class WildCardTypeParser extends TypeParser<WildcardType> {
 
     @Override

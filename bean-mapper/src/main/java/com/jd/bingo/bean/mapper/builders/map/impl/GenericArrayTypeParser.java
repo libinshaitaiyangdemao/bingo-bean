@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
  * @createdate: 2019/1/24 17:40
  * @lastdate:
  */
+@Deprecated
 public class GenericArrayTypeParser extends TypeParser<GenericArrayType> {
 
     @Override

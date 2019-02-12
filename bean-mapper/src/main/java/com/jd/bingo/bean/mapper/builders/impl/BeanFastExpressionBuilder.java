@@ -34,9 +34,7 @@ public class BeanFastExpressionBuilder extends BeanExpressionBuilder {
                 builder.append("return target;}");
 
                 String[] methods = new String[result.length + 1];
-                for (int i = 0; i < result.length; i++) {
-                    methods[i] = result[i];
-                }
+                System.arraycopy(result,0,methods,0,result.length);
                 methods[result.length] = builder.toString();
                 return methods;
             }

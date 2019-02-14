@@ -1,7 +1,7 @@
 package com.jd.bingo.bean.mapper.builders.impl;
 
 import com.jd.bingo.bean.mapper.builders.Builder;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 import com.jd.bingo.bean.mapper.express.impl.AbstractExpression;
 import com.jd.bingo.bean.mapper.express.impl.DoNothingExpression;

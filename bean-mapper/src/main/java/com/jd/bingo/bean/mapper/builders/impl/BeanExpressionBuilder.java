@@ -1,15 +1,13 @@
 package com.jd.bingo.bean.mapper.builders.impl;
 
 import com.jd.bingo.bean.mapper.builders.Builder;
-import com.jd.bingo.bean.mapper.builders.map.BeanMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 import com.jd.bingo.bean.mapper.express.impl.BeanExpression;
 import com.jd.bingo.bean.mapper.express.impl.DoNothingExpression;
 import com.jd.bingo.bean.mapper.express.impl.ser.GetSetter;
 import com.jd.bingo.bean.mapper.utils.BeanUtil;
-
-import java.nio.channels.ClosedSelectorException;
 
 /**
  * @description:对每个属性，使用GETSETER进行拷贝

@@ -1,6 +1,4 @@
-package com.jd.bingo.bean.mapper.builders.map;
-
-import java.util.Map;
+package com.jd.bingo.bean.mapper.builders.map.entity;
 
 /**
  * @description:

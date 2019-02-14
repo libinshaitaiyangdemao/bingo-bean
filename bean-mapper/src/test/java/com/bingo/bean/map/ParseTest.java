@@ -2,7 +2,7 @@ package com.bingo.bean.map;
 
 import com.bingo.bean.domain.Cat;
 import com.bingo.bean.domain.Dog;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.builders.map.impl.ParseUtil;
 import org.junit.Test;
 

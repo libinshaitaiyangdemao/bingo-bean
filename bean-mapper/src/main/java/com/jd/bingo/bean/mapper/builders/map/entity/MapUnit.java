@@ -1,4 +1,4 @@
-package com.jd.bingo.bean.mapper.builders.map;
+package com.jd.bingo.bean.mapper.builders.map.entity;
 
 import java.lang.reflect.Type;
 

@@ -1,11 +1,7 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
 import com.jd.bingo.bean.mapper.builders.map.MapParser;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
-import com.jd.bingo.bean.mapper.builders.map.impl.ClassParser;
-import com.jd.bingo.bean.mapper.builders.map.impl.GenericArrayTypeParser;
-import com.jd.bingo.bean.mapper.builders.map.impl.ParameterizedTypeParser;
-import com.jd.bingo.bean.mapper.builders.map.impl.TypeParser;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.ParameterizedType;

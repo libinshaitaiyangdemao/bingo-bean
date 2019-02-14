@@ -2,13 +2,12 @@ package com.jd.bingo.bean.mapper.builders;
 
 import com.jd.bingo.bean.mapper.ExpressionFactory;
 import com.jd.bingo.bean.mapper.builders.impl.BaseExpressionBuilder;
-import com.jd.bingo.bean.mapper.builders.impl.BeanExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.BeanFastExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.CollectionExpressionBuilder;
-import com.jd.bingo.bean.mapper.builders.map.BeanMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.CollectionMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.CollectionMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.MapParser;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 
 import java.lang.reflect.Type;

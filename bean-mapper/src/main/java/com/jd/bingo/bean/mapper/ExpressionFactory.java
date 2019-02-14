@@ -3,9 +3,8 @@ package com.jd.bingo.bean.mapper;
 import com.jd.bingo.bean.mapper.builders.Builder;
 import com.jd.bingo.bean.mapper.builders.ExpressionBuildHandler;
 import com.jd.bingo.bean.mapper.builders.map.impl.ChainMapParser;
-import com.jd.bingo.bean.mapper.builders.map.impl.DefaultMapParser;
 import com.jd.bingo.bean.mapper.builders.map.MapParser;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 import com.jd.bingo.bean.mapper.utils.ConcurrentLocalStore;
 

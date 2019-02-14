@@ -1,15 +1,13 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
-import com.jd.bingo.bean.mapper.builders.map.CollectionMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.CollectionMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.utils.BeanUtil;
 import com.jd.bingo.bean.mapper.utils.DefiniteType;
 
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
-import java.lang.reflect.WildcardType;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;

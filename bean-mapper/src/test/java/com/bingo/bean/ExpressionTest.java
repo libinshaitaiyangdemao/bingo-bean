@@ -51,7 +51,7 @@ public class ExpressionTest {
 //        copers.add(new FastJsonCoper(fb));
 //        copers.add(new DozerCoper(fb));
         copers.add(new ExpressionCoper(fb));
-        copers.forEach(coper->coper.doCopy(10000000));
+        copers.forEach(coper->coper.doCopy(100));
     }
 }
 

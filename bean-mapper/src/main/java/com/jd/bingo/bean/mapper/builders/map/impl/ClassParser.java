@@ -1,18 +1,12 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
-import com.jd.bingo.bean.mapper.builders.map.BeanMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.CollectionMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.CollectionMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
 
 import static com.jd.bingo.bean.mapper.builders.map.impl.ParseUtil.mapProperties;
 

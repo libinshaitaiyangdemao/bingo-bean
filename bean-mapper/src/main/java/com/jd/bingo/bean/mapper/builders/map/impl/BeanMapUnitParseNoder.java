@@ -1,8 +1,8 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
 import com.jd.bingo.bean.mapper.annotation.Expressions;
-import com.jd.bingo.bean.mapper.builders.map.BeanMapUnit;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.utils.BeanUtil;
 import com.jd.bingo.bean.mapper.utils.DefiniteType;
 
@@ -49,7 +49,7 @@ public class BeanMapUnitParseNoder implements ChainMapParseNoder {
         return bmu;
     }
 
-    private Map<String,MapUnit> readSourceProperties(Type source){
+    protected Map<String,MapUnit> readSourceProperties(Type source){
         Map<Class,List<DefiniteType>> cms = confirmClass(source);
         if(cms == null){
             return null;
@@ -115,7 +115,7 @@ public class BeanMapUnitParseNoder implements ChainMapParseNoder {
         }
         return mus;
     }
-    private List<MapUnit> mapTargetProperties(Type target,Map<String,MapUnit> mus){
+    protected List<MapUnit> mapTargetProperties(Type target,Map<String,MapUnit> mus){
         if(mus == null || mus.isEmpty()){
             return null;
         }

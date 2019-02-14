@@ -1,6 +1,6 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 
 import java.lang.reflect.Type;
 
@@ -21,6 +21,12 @@ public class BaseMapUnitParseNoder implements ChainMapParseNoder {
      */
     @Override
     public MapUnit parse(Type source, Type target) {
+        if(source.equals(target)){
+            MapUnit mu = new MapUnit();
+            mu.setSouce(source);
+            mu.setTarget(target);
+            return mu;
+        }
         if (target.equals(String.class)||(source instanceof Class && ParseUtil.isBaseClass((Class) source) && target instanceof Class && ParseUtil.isBaseClass((Class) target))) {
             MapUnit mu = new MapUnit();
             mu.setTarget(target);

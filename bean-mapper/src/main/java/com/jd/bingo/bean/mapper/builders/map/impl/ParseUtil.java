@@ -1,7 +1,7 @@
 package com.jd.bingo.bean.mapper.builders.map.impl;
 
 import com.jd.bingo.bean.mapper.annotation.Expressions;
-import com.jd.bingo.bean.mapper.builders.map.MapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.utils.BeanUtil;
 
 import java.lang.reflect.Field;

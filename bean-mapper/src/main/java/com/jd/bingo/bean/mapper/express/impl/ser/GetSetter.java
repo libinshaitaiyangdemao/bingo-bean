@@ -10,7 +10,7 @@ import com.jd.bingo.bean.mapper.express.Expression;
  */
 public abstract class GetSetter {
 
-    private Expression expression;
+    protected Expression expression;
 
     public void setExpression(Expression expression) {
         this.expression = expression;

@@ -3,10 +3,16 @@ package com.jd.bingo.bean.mapper.builders;
 import com.jd.bingo.bean.mapper.ExpressionFactory;
 import com.jd.bingo.bean.mapper.builders.impl.BaseExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.BeanFastExpressionBuilder;
+import com.jd.bingo.bean.mapper.builders.impl.BeanMapExpressionBuilder;
 import com.jd.bingo.bean.mapper.builders.impl.CollectionExpressionBuilder;
+import com.jd.bingo.bean.mapper.builders.impl.MapBeanExpressionBuilder;
+import com.jd.bingo.bean.mapper.builders.impl.MapExpressionBuilder;
+import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.entity.BeanMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.entity.CollectionMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.MapParser;
+import com.jd.bingo.bean.mapper.builders.map.entity.MAPMapUnit;
+import com.jd.bingo.bean.mapper.builders.map.entity.MapBeanMapUnit;
 import com.jd.bingo.bean.mapper.builders.map.entity.MapUnit;
 import com.jd.bingo.bean.mapper.express.Expression;
 
@@ -43,6 +49,9 @@ public class ExpressionBuildHandler {
         setBuilder(MapUnit.class,new BaseExpressionBuilder());
         setBuilder(CollectionMapUnit.class,new CollectionExpressionBuilder());
 //        setBuilder(BeanMapUnit.class,new BeanExpressionBuilder());
+        setBuilder(BeanMapMapUnit.class,new BeanMapExpressionBuilder());
+        setBuilder(MapBeanMapUnit.class,new MapBeanExpressionBuilder());
+        setBuilder(MAPMapUnit.class,new MapExpressionBuilder());
         setBuilder(BeanMapUnit.class,new BeanFastExpressionBuilder());
     }
     public void setBuilder(Class<? extends MapUnit> clazs,Builder<? extends MapUnit> builder){

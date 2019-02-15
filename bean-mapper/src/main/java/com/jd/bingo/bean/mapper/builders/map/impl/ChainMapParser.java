@@ -18,6 +18,9 @@ public class ChainMapParser implements MapParser {
     public ChainMapParser() {
         addNode(new BaseMapUnitParseNoder());
         addNode(new CollectionMapUnitParseNoder());
+        addNode(new BeanMapMapUnitParseNoder());
+        addNode(new MapBeanMapUnitParseNoder());
+        addNode(new MAPMapUnitParseNoder());
         addNode(new BeanMapUnitParseNoder());
     }
 
